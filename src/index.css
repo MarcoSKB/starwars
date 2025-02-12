@@ -1,3 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-jost: jost, sans-serif;
+
+  --color-primary: #ffffff;
+  --color-accent: #00dbff;
+  --color-darkGray: #525252;
+  --color-lightGray: #c4c4c4;
+
+  --text-sm: 12px;
+  --text-base: 16px;
+  --text-md: 22px;
+  --text-lg: 28px;
+  --text-h2: 60px;
+  --text-subtitle: 24px;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+@font-face {
+  font-family: "jost";
+  src: url("./fonts/Jost-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("./fonts/Jost-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("./fonts/Jost-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("./fonts/Jost-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jost";
+  src: url("./fonts/Jost-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   color: rgba(255, 255, 255, 0.87);
   background-color: #121212;
@@ -5,9 +59,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  width: 100%;
+  font-family: jost sans-serif;
+}
+
 body {
-  margin: 0;
   display: flex;
+  margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
