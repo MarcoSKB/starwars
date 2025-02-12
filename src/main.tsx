@@ -1,10 +1,63 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-createRoot(document.getElementById("root")!).render(
+import {
+  AuthPage,
+  ErrorPage,
+  FilmsPage,
+  HomePage,
+  PeoplePage,
+  VehiclePage,
+} from '@pages/index.ts'
+import Layout from './Layout.tsx'
+import './index.css'
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Layout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/',
+          element: <HomePage />,
+        },
+        {
+          path: 'films',
+          element: <FilmsPage />,
+        },
+        {
+          path: 'vehicle',
+          element: <VehiclePage />,
+        },
+        {
+          path: 'people',
+          element: <PeoplePage />,
+        },
+      ],
+    },
+    {
+      path: '/auth',
+      element: <AuthPage />,
+      errorElement: <ErrorPage />,
+    },
+  ],
+  {
+    future: {
+      v7_relativeSplatPath: true,
+    },
+  },
+)
+
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
-  </StrictMode>
-);
+    <RouterProvider
+      router={router}
+      future={{
+        v7_startTransition: true,
+      }}
+    />
+  </StrictMode>,
+)
