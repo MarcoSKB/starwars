@@ -21,8 +21,8 @@ const navList = [
 
 const Navigation = () => {
   return (
-    <nav>
-      <ul className='text-md flex gap-6 font-semibold'>
+    <nav className='order-3 w-full sm:order-none sm:w-auto'>
+      <ul className='text-md flex max-w-[calc(100vw-32px)] gap-6 overflow-x-scroll overflow-y-hidden font-semibold md:overflow-x-auto'>
         {navList.map(({ title, link }) => (
           <li key={link} className='font-jost'>
             <NavLink
