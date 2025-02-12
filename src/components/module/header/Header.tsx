@@ -7,8 +7,8 @@ const Header = () => {
     <header>
       <Container>
         <div className='flex items-center justify-between py-5'>
-          <Link to='/' className='flex h-14 w-14' title='To home page'>
-            <img src='./images/icon.ico' alt='Logotype' />
+          <Link to='/' className='flex h-14 w-30' title='To home page'>
+            <img src='./images/logo.svg' alt='Logotype' />
           </Link>
           <Navigation />
           <Button title='Log out' onClick={() => console.log('Clicked')} />

@@ -28,7 +28,7 @@ const Navigation = () => {
             <NavLink
               to={link}
               className={({ isActive }) =>
-                isActive ? 'text-accent' : 'text-primary'
+                `hover:text-accent relative py-2 transition-all active:opacity-70 ${isActive ? 'text-accent pointer-events-none' : 'text-primary after:bg-accent after:absolute after:bottom-[6px] after:left-0 after:h-[2px] after:w-[10px] after:scale-0 after:transition-all after:content-[""] hover:after:w-full hover:after:scale-100'}`
               }
             >
               {title}
