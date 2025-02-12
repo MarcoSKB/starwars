@@ -10,7 +10,7 @@
 
   --text-sm: 12px;
   --text-base: 16px;
-  --text-md: 22px;
+  --text-md: 18px;
   --text-lg: 28px;
   --text-h2: 60px;
   --text-subtitle: 24px;
@@ -60,8 +60,10 @@
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  font-family: jost sans-serif;
+  font-family: "jost" sans-serif;
 }
 
 body {
