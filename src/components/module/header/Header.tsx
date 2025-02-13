@@ -15,7 +15,9 @@ const Header = () => {
             <img src='./images/logo.svg' alt='Logotype' />
           </Link>
           <Navigation />
-          <Button title='Log out' onClick={() => console.log('Clicked')} />
+          <div className='w-full max-w-[120px]'>
+            <Button title='Log out' onClick={() => console.log('Clicked')} />
+          </div>
         </div>
       </Container>
     </header>
