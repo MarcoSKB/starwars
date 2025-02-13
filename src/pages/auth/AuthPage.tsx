@@ -5,7 +5,7 @@ const AuthPage = () => {
   return (
     <Container>
       <main className='flex min-h-svh w-full items-center justify-center'>
-        <div className='border-primary relative flex w-full max-w-[400px] flex-col items-end gap-3 border-2 border-solid bg-[#121212] px-10 py-6 pt-[42px]'>
+        <div className='border-primary relative my-[42px] flex w-full max-w-[400px] flex-col items-end gap-3 border-2 border-solid bg-[#121212] px-10 py-6 pt-[42px]'>
           <img
             src='./images/logo.svg'
             className='absolute top-0 left-[50%] z-0 w-32 translate-x-[-50%] translate-y-[-50%] bg-[#121212] px-2'
