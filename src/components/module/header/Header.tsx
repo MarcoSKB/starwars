@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useAppDispatch } from '@utils/store'
+import { logout } from '@features/auth/authSlice'
 import { Navigation } from '@components/module'
 import { Button, Container } from '@components/ui'
 
 const Header = () => {
+  const dispatch = useAppDispatch()
+
   return (
     <header>
       <Container>
@@ -16,7 +20,7 @@ const Header = () => {
           </Link>
           <Navigation />
           <div className='w-full max-w-20 md:max-w-30'>
-            <Button title='Log out' onClick={() => console.log('Clicked')} />
+            <Button title='Log out' onClick={() => dispatch(logout())} />
           </div>
         </div>
       </Container>

@@ -2,9 +2,11 @@ import { useNavigate } from 'react-router-dom'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-import { LOGIN, PASSWORD } from '@/utils/globals'
+import { useAppDispatch } from '@utils/store'
+import { LOGIN, PASSWORD } from '@utils/globals'
 import { loginSchema } from '@utils/validation'
-import { Button, Input } from '@/components/ui'
+import { login as authLogin } from '@features/auth/authSlice'
+import { Button, Input } from '@components/ui'
 
 interface Input {
   login: string
@@ -12,18 +14,21 @@ interface Input {
 }
 
 const AuthForm = () => {
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
     setError,
     formState: { errors },
   } = useForm<Input>({ resolver: yupResolver(loginSchema) })
-  const navigate = useNavigate()
 
   const onSubmit: SubmitHandler<Input> = ({ login, password }) => {
     if (login !== LOGIN || password !== PASSWORD) {
       return setError('login', { message: 'Wrong login or password' })
     }
+
+    dispatch(authLogin())
     navigate('/', { replace: true })
   }
 
