@@ -1,5 +1,11 @@
+import { MainSection } from './module'
+
 const HomePage = () => {
-  return <div>HomePage</div>
+  return (
+    <>
+      <MainSection />
+    </>
+  )
 }
 
 export default HomePage
