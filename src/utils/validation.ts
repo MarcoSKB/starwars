@@ -4,7 +4,7 @@ export const loginSchema = yup.object({
   login: yup
     .string()
     .required('Login is a required field')
-    .min(5, 'The дщпшт must be 5 or more characters'),
+    .min(5, 'The login must be 5 or more characters'),
   password: yup
     .string()
     .required('Password is a required field')
