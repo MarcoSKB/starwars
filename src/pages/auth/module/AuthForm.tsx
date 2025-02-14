@@ -3,7 +3,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import { useAppDispatch } from '@utils/store'
-import { LOGIN, PASSWORD } from '@utils/globals'
+import { LOGIN, PASSWORD } from '@/utils/constants'
 import { loginSchema } from '@utils/validation'
 import { login as authLogin } from '@features/auth/authSlice'
 import { Button, Input } from '@components/ui'
