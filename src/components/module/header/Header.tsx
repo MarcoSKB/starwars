@@ -19,7 +19,7 @@ const Header = () => {
             <img src='./images/logo.svg' alt='Logotype' />
           </Link>
           <Navigation />
-          <div className='w-full max-w-20 md:max-w-30'>
+          <div className='w-full max-w-24 md:max-w-30'>
             <Button onClick={() => dispatch(logout())}>Log out</Button>
           </div>
         </div>
