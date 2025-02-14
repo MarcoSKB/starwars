@@ -62,7 +62,7 @@ const AuthForm = () => {
         />
       </label>
       <div className='w-full max-w-1/2'>
-        <Button type='submit' title='Log in' />
+        <Button type='submit'>Log in</Button>
       </div>
     </form>
   )

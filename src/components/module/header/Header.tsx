@@ -20,7 +20,7 @@ const Header = () => {
           </Link>
           <Navigation />
           <div className='w-full max-w-20 md:max-w-30'>
-            <Button title='Log out' onClick={() => dispatch(logout())} />
+            <Button onClick={() => dispatch(logout())}>Log out</Button>
           </div>
         </div>
       </Container>
