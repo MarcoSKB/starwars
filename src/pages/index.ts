@@ -4,5 +4,14 @@ import AuthPage from './auth/AuthPage'
 import HomePage from './home/HomePage'
 import PeoplePage from './people/PeoplePage'
 import VehiclePage from './vehicle/VehiclePage'
+import NotFoundPage from './notFound/NotFoundPage'
 
-export { ErrorPage, FilmsPage, AuthPage, HomePage, PeoplePage, VehiclePage }
+export {
+  ErrorPage,
+  FilmsPage,
+  AuthPage,
+  HomePage,
+  PeoplePage,
+  VehiclePage,
+  NotFoundPage,
+}
