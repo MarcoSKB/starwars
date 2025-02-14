@@ -9,6 +9,7 @@ import {
   ErrorPage,
   FilmsPage,
   HomePage,
+  NotFoundPage,
   PeoplePage,
   VehiclePage,
 } from '@pages/index.ts'
@@ -23,7 +24,7 @@ const router = createBrowserRouter(
       errorElement: <ErrorPage />,
       children: [
         {
-          path: '/',
+          index: true,
           element: <HomePage />,
         },
         {
@@ -37,6 +38,10 @@ const router = createBrowserRouter(
         {
           path: 'people',
           element: <PeoplePage />,
+        },
+        {
+          path: '*',
+          element: <NotFoundPage />,
         },
       ],
     },
