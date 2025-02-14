@@ -1,7 +1,15 @@
+import { Navigate } from 'react-router-dom'
+import { useAppSelector } from '@/utils/store'
 import { Container } from '@/components/ui'
 import AuthForm from './module/AuthForm'
 
 const AuthPage = () => {
+  const isAuthed = useAppSelector((state) => state.auth.isAuthenticated)
+
+  if (isAuthed) {
+    return <Navigate to='/' replace />
+  }
+
   return (
     <Container>
       <main className='flex min-h-svh w-full items-center justify-center'>
