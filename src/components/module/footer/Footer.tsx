@@ -11,7 +11,7 @@ const Footer = () => {
               className='transition-opacity hover:opacity-70'
               title='To Facebook page'
             >
-              <img src='./images/facebook.svg' alt='Facebook' />
+              <img src='/images/facebook.svg' alt='Facebook' />
             </a>
             <a
               href='https://www.instagram.com/'
@@ -20,7 +20,7 @@ const Footer = () => {
               className='transition-opacity hover:opacity-70'
               title='To Instagram page'
             >
-              <img src='./images/instagram.svg' alt='Instagram' />
+              <img src='/images/instagram.svg' alt='Instagram' />
             </a>
             <a
               href='https://x.com/'
@@ -29,7 +29,7 @@ const Footer = () => {
               className='transition-opacity hover:opacity-70'
               title='To Twitter page'
             >
-              <img src='./images/twitter.svg' alt='Twitter' />
+              <img src='/images/twitter.svg' alt='Twitter' />
             </a>
           </div>
           <hr className='border-accent' />

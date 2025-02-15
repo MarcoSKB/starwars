@@ -24,31 +24,31 @@
 
 @font-face {
   font-family: 'jost';
-  src: url('./fonts/Jost-Light.ttf');
+  src: url('/fonts/Jost-Light.ttf');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'jost';
-  src: url('./fonts/Jost-Regular.ttf');
+  src: url('/fonts/Jost-Regular.ttf');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'jost';
-  src: url('./fonts/Jost-Medium.ttf');
+  src: url('/fonts/Jost-Medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'jost';
-  src: url('./fonts/Jost-SemiBold.ttf');
+  src: url('/fonts/Jost-SemiBold.ttf');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'jost';
-  src: url('./fonts/Jost-Bold.ttf');
+  src: url('/fonts/Jost-Bold.ttf');
   font-weight: 700;
   font-style: normal;
 }
@@ -65,7 +65,7 @@
   flex-direction: column;
   width: 100%;
   font-family: 'jost' sans-serif;
-  background: url('./images/bg.png') repeat;
+  background: url('/images/bg.png') repeat;
 }
 
 body {

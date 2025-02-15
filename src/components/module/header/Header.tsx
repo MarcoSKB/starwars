@@ -16,7 +16,7 @@ const Header = () => {
             className='mr-auto flex h-10 w-20 md:mr-0 md:h-14 md:w-30'
             title='To home page'
           >
-            <img src='./images/logo.svg' alt='Logotype' />
+            <img src='/images/logo.svg' alt='Logotype' />
           </Link>
           <Navigation />
           <div className='w-full max-w-24 md:max-w-30'>
