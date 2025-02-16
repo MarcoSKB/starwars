@@ -9,7 +9,7 @@ const PlanetsTable = () => {
     error,
     loading,
     refetch,
-  } = useFetchData<SwapiPlanetList>(SWAPI_BASE_URL + 'planetsfqwfq')
+  } = useFetchData<SwapiPlanetList>(SWAPI_BASE_URL + 'planets')
 
   if (loading) {
     return (
