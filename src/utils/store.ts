@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
 import authReducer from '@features/auth/authSlice'
+import planetsSlice from '@features/planets/planetsSlice'
 
 const loadGlobalState = () => {
   try {
@@ -24,6 +25,7 @@ const saveGlobalState = (state: RootState) => {
 
 const reducer = combineReducers({
   auth: authReducer,
+  planets: planetsSlice,
 })
 
 export const store = configureStore({
