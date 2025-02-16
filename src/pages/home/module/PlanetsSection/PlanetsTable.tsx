@@ -51,7 +51,7 @@ const PlanetsTable = () => {
             >
               <td className='border-accent flex flex-[25%] border-x-1 px-3'>
                 <Link
-                  to={`/planets/${planet.url[planet.url.length - 2]}`}
+                  to={`/planets/${planet.url.split('/').filter((arg) => +arg)[0]}`}
                   className='py-1 md:py-1.5'
                 >
                   {planet.name} ↵
