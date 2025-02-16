@@ -5,10 +5,13 @@ interface Props extends React.InputHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = React.forwardRef<HTMLButtonElement, Props>(
-  ({ isLoading = false, type = 'button', children, ...props }, ref) => {
+  (
+    { isLoading = false, type = 'button', children, className, ...props },
+    ref,
+  ) => {
     return (
       <button
-        className='text-primary border-primary active:border-accent flex w-full items-center justify-center gap-2 border-2 border-solid px-3 py-1 text-base font-semibold transition-all hover:cursor-pointer hover:opacity-80 active:translate-y-1 disabled:cursor-default disabled:opacity-50 disabled:active:translate-y-0 sm:gap-3 sm:px-4 sm:py-2'
+        className={`text-primary border-primary active:border-accent flex w-full items-center justify-center gap-2 border-2 border-solid px-3 py-1 text-base font-semibold transition-all hover:cursor-pointer hover:opacity-80 active:translate-y-1 disabled:cursor-default disabled:opacity-50 disabled:active:translate-y-0 sm:gap-3 sm:px-4 sm:py-2 ${className}`}
         disabled={isLoading}
         ref={ref}
         {...props}
