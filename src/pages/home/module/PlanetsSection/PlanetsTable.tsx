@@ -1,7 +1,8 @@
 import useFetchData from '@hooks/useFetchData'
 import { SWAPI_BASE_URL } from '@utils/constants'
 import { SwapiPlanetList } from '@utils/types'
-import { ErrorComponent, Link } from '@components/ui'
+import { ErrorComponent } from '@components/ui'
+import PlanetItem from './PlanetItem'
 
 const PlanetsTable = () => {
   const {
@@ -45,28 +46,7 @@ const PlanetsTable = () => {
         </thead>
         <tbody className='flex w-full flex-col py-4'>
           {planetsData?.results.map((planet) => (
-            <tr
-              key={planet.name}
-              className='flex w-full justify-between gap-2 md:gap-4'
-            >
-              <td className='border-accent flex flex-[25%] border-x-1 px-3'>
-                <Link
-                  to={`/planets/${planet.url.split('/').filter((arg) => +arg)[0]}`}
-                  className='py-1 md:py-1.5'
-                >
-                  {planet.name} ↵
-                </Link>
-              </td>
-              <td className='border-accent flex-[25%] border-x-1 px-3 py-1 md:py-1.5'>
-                {planet.diameter}
-              </td>
-              <td className='border-accent flex-[25%] border-x-1 px-3 py-1 md:py-1.5'>
-                {planet.population}
-              </td>
-              <td className='border-accent flex-[25%] border-x-1 px-3 py-1 md:py-1.5'>
-                {planet.terrain}
-              </td>
-            </tr>
+            <PlanetItem key={planet.url} swapiPlanet={planet} />
           ))}
         </tbody>
       </table>
