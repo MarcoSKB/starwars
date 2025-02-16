@@ -14,11 +14,11 @@ const ErrorComponent: React.FC<Props> = (props) => {
   } = props
 
   return (
-    <div className='flex w-fit flex-col gap-1 py-2'>
-      <p className='text-md text-red-400'>{title}</p>
-      <p className='text-md mb-3'>{error.message}</p>
+    <div className='flex w-fit flex-col gap-1 py-4'>
+      <p className='sm:text-md text-base text-red-400'>{title}</p>
+      <p className='sm:text-md mb-3 text-base opacity-80'>{error.message}</p>
       {refetch && (
-        <Button onClick={refetch} className='max-w-[200px]'>
+        <Button onClick={refetch} className='sm:max-w-[200px]'>
           Try again
         </Button>
       )}
