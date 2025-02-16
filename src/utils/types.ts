@@ -6,20 +6,22 @@ interface SwapiBase<T> {
 }
 
 export type SwapiPerson = {
-  name: string
-  rotation_period: number
-  orbital_period: number
-  diameter: number
-  climate: string
-  gravity: string
-  terrain: string
-  surface_water: number
-  population: number
-  residents: string[]
+  birth_year: string
+  eye_color: string
   films: string[]
+  gender: string
+  hair_color: string
+  height: number
+  homeworld: string
+  mass: number
+  name: string
+  skin_color: string
   created: string
   edited: string
+  species: string[]
+  starships: string[]
   url: string
+  vehicles: string[]
 }
 
 export interface SwapiPeopleList extends SwapiBase<SwapiPerson> {}
