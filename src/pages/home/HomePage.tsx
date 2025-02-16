@@ -1,9 +1,10 @@
-import MainSection from './module/MainSection'
+import { MainSection, PlanetsSection } from './module'
 
 const HomePage = () => {
   return (
     <>
       <MainSection />
+      <PlanetsSection />
     </>
   )
 }
