@@ -99,7 +99,7 @@ export interface StorePlanetType
 }
 
 export interface StoreFilmType
-  extends Pick<SwapiFilm, 'director' | 'producer' | 'release_date'> {
+  extends Pick<SwapiFilm, 'title' | 'director' | 'producer' | 'release_date'> {
   id: number
 }
 
