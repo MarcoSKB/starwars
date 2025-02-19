@@ -5,6 +5,7 @@ import HomePage from './home/HomePage'
 import PeoplePage from './people/PeoplePage'
 import VehiclePage from './vehicle/VehiclePage'
 import NotFoundPage from './notFound/NotFoundPage'
+import PlanetPage from './planet/PlanetPage'
 
 export {
   ErrorPage,
@@ -14,4 +15,5 @@ export {
   PeoplePage,
   VehiclePage,
   NotFoundPage,
+  PlanetPage,
 }

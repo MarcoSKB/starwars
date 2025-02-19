@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 import { store } from './utils/store.ts'
@@ -11,6 +11,7 @@ import {
   HomePage,
   NotFoundPage,
   PeoplePage,
+  PlanetPage,
   VehiclePage,
 } from '@pages/index.ts'
 import Layout from './Layout.tsx'
@@ -26,6 +27,14 @@ const router = createBrowserRouter(
         {
           index: true,
           element: <HomePage />,
+        },
+        {
+          path: 'planets',
+          element: <Navigate to='/' replace />,
+        },
+        {
+          path: 'planets/:planetId',
+          element: <PlanetPage />,
         },
         {
           path: 'films',
