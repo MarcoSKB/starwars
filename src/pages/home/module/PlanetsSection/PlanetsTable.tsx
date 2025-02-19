@@ -10,6 +10,8 @@ import PlanetItem from './PlanetItem'
 const PlanetsTable = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const currentPage = searchParams.get('page')
+    ? Number(searchParams.get('page'))
+    : 1
   const {
     data: planetsData,
     error,
@@ -19,8 +21,6 @@ const PlanetsTable = () => {
     {},
     [currentPage],
   )
-
-  console.log(planetsData)
 
   if (loading) {
     return (
