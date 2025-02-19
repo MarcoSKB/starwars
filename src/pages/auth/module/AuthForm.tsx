@@ -6,7 +6,7 @@ import { useAppDispatch } from '@utils/store'
 import { LOGIN, PASSWORD } from '@/utils/constants'
 import { loginSchema } from '@utils/validation'
 import { login as authLogin } from '@features/auth/authSlice'
-import { Button, Input } from '@components/ui'
+import { Button, ErrorForm, Input } from '@components/ui'
 
 interface Input {
   login: string
@@ -37,14 +37,7 @@ const AuthForm = () => {
       className='flex w-full flex-col items-end gap-3'
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className='flex w-full flex-col gap-1 text-red-400'>
-        {errors.login && errors.login.message && (
-          <span>{errors.login.message}*</span>
-        )}
-        {errors.password && errors.password.message && (
-          <span>{errors.password.message}*</span>
-        )}
-      </div>
+      <ErrorForm errors={errors} />
       <label className='flex w-full flex-col gap-2 text-base'>
         Login:
         <Input
@@ -61,9 +54,9 @@ const AuthForm = () => {
           {...register('password')}
         />
       </label>
-      <div className='w-full max-w-1/2'>
-        <Button type='submit'>Log in</Button>
-      </div>
+      <Button type='submit' className='w-full max-w-1/2'>
+        Log in
+      </Button>
     </form>
   )
 }
