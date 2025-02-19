@@ -9,7 +9,7 @@ interface Props {
 const PaginationControl: React.FC<Props> = (props) => {
   const { paginationData, onClickHandler, currentPage } = props
   return (
-    <div className='flex justify-center gap-2 md:gap-4'>
+    <div className='flex justify-center gap-1 text-[13px] sm:gap-2 sm:text-base md:gap-4'>
       {paginationData.map((buttonValue, index) => (
         <Button
           key={index}
