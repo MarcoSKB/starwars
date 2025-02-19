@@ -46,7 +46,11 @@ const PlanetsTable = () => {
         </thead>
         <tbody className='flex w-full flex-col py-4'>
           {planetsData?.results.map((planet) => (
-            <PlanetItem key={planet.url} swapiPlanet={planet} />
+            <PlanetItem
+              key={planet.url}
+              data={planet}
+              id={+planet.url.split('/').filter((arg) => +arg)[0]}
+            />
           ))}
         </tbody>
       </table>
