@@ -29,15 +29,15 @@ export interface SwapiPersonList extends SwapiBase<SwapiPerson> {}
 export type SwapiPlanet = {
   climate: string
   created: string
-  diameter: number
+  diameter: string
   edited: string
   films: string[]
   gravity: number
   name: string
-  orbital_period: number
-  population: number
+  orbital_period: string
+  population: string
   residents: string[]
-  rotation_period: number
+  rotation_period: string
   surface_water: number
   terrain: string
   url: string

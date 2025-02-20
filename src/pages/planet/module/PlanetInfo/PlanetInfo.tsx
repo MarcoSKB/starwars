@@ -41,9 +41,9 @@ interface Props {
 interface InputForm {
   terrain: string
   climate: string
-  rotation_period: number
-  population: number
-  diameter: number
+  rotation_period: string
+  population: string
+  diameter: string
 }
 
 const PlanetInfo: React.FC<Props> = ({ id, data }) => {
@@ -52,6 +52,7 @@ const PlanetInfo: React.FC<Props> = ({ id, data }) => {
   const {
     register,
     handleSubmit,
+    resetField,
     formState: { errors, isValid },
   } = useForm<InputForm>({
     defaultValues: planetData,
@@ -65,6 +66,15 @@ const PlanetInfo: React.FC<Props> = ({ id, data }) => {
     if (isEditable && isValid) {
       upsertData({ id, name: data.name, ...formData })
     }
+  }
+
+  const onCancelEdit = () => {
+    resetField('climate'),
+      resetField('diameter'),
+      resetField('population'),
+      resetField('rotation_period'),
+      resetField('terrain')
+    setIsEditable(false)
   }
 
   return (
@@ -88,9 +98,10 @@ const PlanetInfo: React.FC<Props> = ({ id, data }) => {
         ))}
       </Subtitle>
       <ErrorForm className='md:mr-auto' errors={errors} />
-      <Button type='submit' className='max-w-1/2 self-end md:max-w-[200px]'>
-        {isEditable ? 'Save info' : 'Edit info'}
-      </Button>
+      <div className='flex w-full max-w-1/2 flex-col gap-2 self-end md:max-w-[200px]'>
+        <Button type='submit'>{isEditable ? 'Save info' : 'Edit info'}</Button>
+        {isEditable && <Button onClick={() => onCancelEdit()}>Cancel</Button>}
+      </div>
     </form>
   )
 }

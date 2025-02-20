@@ -26,18 +26,18 @@ export const planetEditSchema = yup.object({
     .min(4, 'Climate field must be at least 4 characters long')
     .required('Climate is a required field'),
   rotation_period: yup
-    .number()
-    .typeError('The Rotation period field must be the number type')
-    .min(0, 'The Rotation period field must be 0 or greater')
+    .string()
+    .typeError('The Rotation period field must be the string type')
+    .min(1, 'The Rotation period field must be 0 or greater')
     .required('Rotation period is a required field'),
   population: yup
-    .number()
-    .typeError('The Population field must be the number type')
-    .min(0, 'The Population field must be 0 or greater')
+    .string()
+    .typeError('The Population field must be the string type')
+    .min(1, 'The Population field must be 0 or greater')
     .required('Population is a required field'),
   diameter: yup
-    .number()
-    .typeError('The Diameter field must be the number type')
-    .min(0, 'The Diameter field must be 0 or greater')
+    .string()
+    .typeError('The Diameter field must be the string type')
+    .min(1, 'The Diameter field must be 0 or greater')
     .required('Diameter is a required field'),
 })
