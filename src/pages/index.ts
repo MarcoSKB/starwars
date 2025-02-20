@@ -6,6 +6,7 @@ import PeoplePage from './people/PeoplePage'
 import VehiclePage from './vehicle/VehiclePage'
 import NotFoundPage from './notFound/NotFoundPage'
 import PlanetPage from './planet/PlanetPage'
+import FilmPage from './film/FilmPage'
 
 export {
   ErrorPage,
@@ -16,4 +17,5 @@ export {
   VehiclePage,
   NotFoundPage,
   PlanetPage,
+  FilmPage,
 }

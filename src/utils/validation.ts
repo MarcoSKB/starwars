@@ -41,3 +41,21 @@ export const planetEditSchema = yup.object({
     .min(1, 'The Diameter field must be 0 or greater')
     .required('Diameter is a required field'),
 })
+
+export const filmEditSchema = yup.object({
+  director: yup
+    .string()
+    .typeError('The Director field must be the string type')
+    .min(4, 'Director field must be at least 4 characters long')
+    .required('Director is a required field'),
+  producer: yup
+    .string()
+    .typeError('The Producer field must be the string type')
+    .min(4, 'Producer field must be at least 4 characters long')
+    .required('Producer is a required field'),
+  release_date: yup
+    .string()
+    .typeError('The Producer field must be the string type')
+    .min(4, 'Producer field must be at least 4 characters long')
+    .required('Producer is a required field'),
+})

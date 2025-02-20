@@ -7,6 +7,7 @@ import { store } from './utils/store.ts'
 import {
   AuthPage,
   ErrorPage,
+  FilmPage,
   FilmsPage,
   HomePage,
   NotFoundPage,
@@ -39,6 +40,10 @@ const router = createBrowserRouter(
         {
           path: 'films',
           element: <FilmsPage />,
+        },
+        {
+          path: 'films/:filmId',
+          element: <FilmPage />,
         },
         {
           path: 'vehicle',
