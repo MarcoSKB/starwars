@@ -1,4 +1,5 @@
 import Button from './Button'
+import Card from './Card'
 import Container from './Container'
 import ErrorComponent from './ErrorComponent'
 import ErrorForm from './ErrorForm'
@@ -16,4 +17,5 @@ export {
   H2,
   ErrorComponent,
   ErrorForm,
+  Card,
 }
