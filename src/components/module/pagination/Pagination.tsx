@@ -15,7 +15,7 @@ const Pagination: React.FC<Props> = (props) => {
     totalCount,
     currentPage,
     perPageCount = 10,
-    siblingsCount = 1.5,
+    siblingsCount = 1,
     setSearchParams,
   } = props
 
@@ -24,11 +24,9 @@ const Pagination: React.FC<Props> = (props) => {
 
   const smallPageLength = maxPageValue <= siblingsCount * 2 + 1
   const isCloseToMin =
-    minPageValue <= currentPage &&
-    minPageValue + (siblingsCount + 1) >= currentPage
+    minPageValue <= currentPage && minPageValue + siblingsCount >= currentPage
   const isCloseToMax =
-    maxPageValue >= currentPage &&
-    maxPageValue - (siblingsCount + 1) <= currentPage
+    maxPageValue >= currentPage && maxPageValue - siblingsCount <= currentPage
 
   const onClickHandler = (value: string) => {
     setSearchParams({
