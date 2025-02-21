@@ -6,7 +6,7 @@ import useFetchData from '@hooks/useFetchData'
 import { Container } from '@components/ui'
 import { PlanetInfo, PlanetResidentsList } from './module'
 
-const PlanetPage = () => {
+const PlanetDetailPage = () => {
   let { planetId } = useParams() as { planetId: string }
   const {
     data: planetData,
@@ -48,4 +48,4 @@ const PlanetPage = () => {
   )
 }
 
-export default PlanetPage
+export default PlanetDetailPage

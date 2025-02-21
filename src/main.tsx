@@ -7,12 +7,12 @@ import { store } from './utils/store.ts'
 import {
   AuthPage,
   ErrorPage,
-  FilmPage,
+  FilmDetailPage,
   FilmsPage,
   HomePage,
   NotFoundPage,
   PeoplePage,
-  PlanetPage,
+  PlanetDetailPage,
   VehiclePage,
 } from '@pages/index.ts'
 import Layout from './Layout.tsx'
@@ -35,7 +35,7 @@ const router = createBrowserRouter(
         },
         {
           path: 'planets/:planetId',
-          element: <PlanetPage />,
+          element: <PlanetDetailPage />,
         },
         {
           path: 'films',
@@ -43,7 +43,7 @@ const router = createBrowserRouter(
         },
         {
           path: 'films/:filmId',
-          element: <FilmPage />,
+          element: <FilmDetailPage />,
         },
         {
           path: 'vehicle',

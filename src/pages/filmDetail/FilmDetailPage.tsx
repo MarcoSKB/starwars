@@ -6,7 +6,7 @@ import useFetchData from '@hooks/useFetchData'
 import { Container, H2, Subtitle } from '@components/ui'
 import { FilmInfo } from './modules'
 
-const FilmPage = () => {
+const FilmDetailPage = () => {
   let { filmId } = useParams() as { filmId: string }
   const {
     data: filmData,
@@ -52,4 +52,4 @@ const FilmPage = () => {
   )
 }
 
-export default FilmPage
+export default FilmDetailPage
