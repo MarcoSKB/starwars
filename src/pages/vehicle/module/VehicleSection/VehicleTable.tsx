@@ -60,7 +60,7 @@ const VehicleTable = () => {
             </tr>
           </thead>
           <tbody className='flex w-full flex-col py-4'>
-            {vehicleData?.results.map((film) => (
+            {vehicleData.results.map((film) => (
               <VehicleItem
                 key={film.url}
                 data={film}
@@ -72,8 +72,8 @@ const VehicleTable = () => {
       </div>
       <div className='mx-auto py-5 md:py-10'>
         <Pagination
-          currentPage={currentPage ? +currentPage : 1}
-          totalCount={vehicleData ? vehicleData.count : 0}
+          currentPage={+currentPage}
+          totalCount={vehicleData.count}
           setSearchParams={setSearchParams}
         />
       </div>
