@@ -22,7 +22,7 @@ const VehicleTable = () => {
     [currentPage],
   )
 
-  if (loading) {
+  if (loading || !vehicleData) {
     return (
       <div className='flex flex-col gap-5 md:gap-10'>
         <div className='flex w-full flex-col gap-2'>
