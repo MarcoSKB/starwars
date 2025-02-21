@@ -22,7 +22,17 @@ const PlanetsTable = () => {
     [currentPage],
   )
 
-  if (loading) {
+  if (error instanceof Error) {
+    return (
+      <ErrorComponent
+        title="Couldn't get the data table, please try again later"
+        error={error}
+        refetch={() => setSearchParams({ page: '1' })}
+      />
+    )
+  }
+
+  if (loading || !planetsData) {
     return (
       <div className='flex flex-col gap-5 md:gap-10'>
         <div className='flex w-full flex-col gap-2'>
@@ -33,16 +43,6 @@ const PlanetsTable = () => {
         </div>
         <div className='bg-darkGray h-11 animate-pulse rounded-md opacity-40' />
       </div>
-    )
-  }
-
-  if (error instanceof Error) {
-    return (
-      <ErrorComponent
-        title="Couldn't get the data table, please try again later"
-        error={error}
-        refetch={() => setSearchParams({ page: '1' })}
-      />
     )
   }
 
@@ -59,7 +59,7 @@ const PlanetsTable = () => {
             </tr>
           </thead>
           <tbody className='flex w-full flex-col py-4'>
-            {planetsData?.results.map((planet) => (
+            {planetsData.results.map((planet) => (
               <PlanetItem
                 key={planet.url}
                 data={planet}
@@ -72,7 +72,7 @@ const PlanetsTable = () => {
       <div className='mx-auto py-5 md:py-10'>
         <Pagination
           currentPage={currentPage ? +currentPage : 1}
-          totalCount={planetsData ? planetsData.count : 0}
+          totalCount={planetsData.count}
           setSearchParams={setSearchParams}
         />
       </div>

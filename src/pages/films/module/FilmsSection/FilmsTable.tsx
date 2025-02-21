@@ -22,7 +22,17 @@ const FilmsTable = () => {
     [currentPage],
   )
 
-  if (loading) {
+  if (error instanceof Error) {
+    return (
+      <ErrorComponent
+        title="Couldn't get the films data, please try again"
+        error={error}
+        refetch={() => setSearchParams({ page: '1' })}
+      />
+    )
+  }
+
+  if (loading || !filmsData) {
     return (
       <div className='flex flex-col gap-5 md:gap-10'>
         <div className='flex w-full flex-col gap-2'>
@@ -33,16 +43,6 @@ const FilmsTable = () => {
         </div>
         <div className='bg-darkGray h-11 animate-pulse rounded-md opacity-40' />
       </div>
-    )
-  }
-
-  if (error instanceof Error) {
-    return (
-      <ErrorComponent
-        title="Couldn't get the films data, please try again"
-        error={error}
-        refetch={() => setSearchParams({ page: '1' })}
-      />
     )
   }
 
@@ -59,7 +59,7 @@ const FilmsTable = () => {
             </tr>
           </thead>
           <tbody className='flex w-full flex-col py-4'>
-            {filmsData?.results.map((film) => (
+            {filmsData.results.map((film) => (
               <FilmItem
                 key={film.url}
                 data={film}
@@ -72,7 +72,7 @@ const FilmsTable = () => {
       <div className='mx-auto py-5 md:py-10'>
         <Pagination
           currentPage={currentPage ? +currentPage : 1}
-          totalCount={filmsData ? filmsData.count : 0}
+          totalCount={filmsData.count}
           setSearchParams={setSearchParams}
         />
       </div>

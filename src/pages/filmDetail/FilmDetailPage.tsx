@@ -14,7 +14,11 @@ const FilmDetailPage = () => {
     loading,
   } = useFetchData<SwapiFilm>(`${SWAPI_BASE_URL}films/${filmId}`)
 
-  if (loading) {
+  if (error instanceof Error) {
+    return <Navigate to='/films' />
+  }
+
+  if (loading || !filmData) {
     return (
       <Container>
         <div className='bg-darkGray mb-5 h-[200px] w-full animate-pulse rounded-xl md:mb-10 md:h-[320px]' />
@@ -25,10 +29,6 @@ const FilmDetailPage = () => {
         <div className='bg-darkGray mb-3 h-[88px] w-full animate-pulse md:h-[44px]' />
       </Container>
     )
-  }
-
-  if (error instanceof Error) {
-    return <Navigate to='/films' />
   }
 
   return (
@@ -45,8 +45,8 @@ const FilmDetailPage = () => {
           </h1>
         </div>
         <H2>Description</H2>
-        <Subtitle className='mb-10'>{filmData?.opening_crawl}</Subtitle>
-        {filmData && <FilmInfo id={+filmId} data={filmData} />}
+        <Subtitle className='mb-10'>{filmData.opening_crawl}</Subtitle>
+        <FilmInfo id={+filmId} data={filmData} />
       </section>
     </Container>
   )

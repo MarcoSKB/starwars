@@ -14,6 +14,10 @@ const VehicleDetailPage = () => {
     loading,
   } = useFetchData<SwapiVehicle>(`${SWAPI_BASE_URL}vehicles/${vehicleId}`)
 
+  if (error instanceof Error) {
+    return <Navigate to='/' replace />
+  }
+
   if (loading || !vehicleData) {
     return (
       <Container>
@@ -25,10 +29,6 @@ const VehicleDetailPage = () => {
         </div>
       </Container>
     )
-  }
-
-  if (error instanceof Error) {
-    return <Navigate to='/' replace />
   }
 
   return (

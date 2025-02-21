@@ -14,7 +14,11 @@ const PlanetDetailPage = () => {
     loading,
   } = useFetchData<SwapiPlanet>(`${SWAPI_BASE_URL}planets/${planetId}`)
 
-  if (loading) {
+  if (error instanceof Error) {
+    return <Navigate to='/' replace />
+  }
+
+  if (loading || !planetData) {
     return (
       <Container>
         <div className='mb-5 flex flex-col gap-3 py-4 md:mb-12'>
@@ -27,22 +31,14 @@ const PlanetDetailPage = () => {
     )
   }
 
-  if (error instanceof Error) {
-    return <Navigate to='/' replace />
-  }
-
   return (
     <Container>
       <section className='mb-5 flex flex-col py-4 md:mb-12'>
         <h1 className='font-jost text-accent mb-1 text-[30px] font-semibold md:mb-3 md:text-[52px]'>
           The planet {planetData?.name}
         </h1>
-        {planetData && (
-          <>
-            <PlanetInfo id={+planetId} data={planetData} />
-            <PlanetResidentsList residents={planetData.residents} />
-          </>
-        )}
+        <PlanetInfo id={+planetId} data={planetData} />
+        <PlanetResidentsList residents={planetData.residents} />
       </section>
     </Container>
   )

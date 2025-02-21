@@ -22,6 +22,16 @@ const VehicleTable = () => {
     [currentPage],
   )
 
+  if (error instanceof Error) {
+    return (
+      <ErrorComponent
+        title="Couldn't get the vehicle data, please try again"
+        error={error}
+        refetch={() => setSearchParams({ page: '1' })}
+      />
+    )
+  }
+
   if (loading || !vehicleData) {
     return (
       <div className='flex flex-col gap-5 md:gap-10'>
@@ -33,16 +43,6 @@ const VehicleTable = () => {
         </div>
         <div className='bg-darkGray h-11 animate-pulse rounded-md opacity-40' />
       </div>
-    )
-  }
-
-  if (error instanceof Error) {
-    return (
-      <ErrorComponent
-        title="Couldn't get the vehicle data, please try again"
-        error={error}
-        refetch={() => setSearchParams({ page: '1' })}
-      />
     )
   }
 

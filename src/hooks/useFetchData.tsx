@@ -5,7 +5,7 @@ export default function useFetchData<T>(
   options: RequestInit = {},
   dependencies: React.DependencyList = [],
 ) {
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<Error | null>(null)
   const [data, setData] = useState<T | null>(null)
 
