@@ -65,13 +65,13 @@ export type SwapiFilm = {
 export interface SwapiFilmList extends SwapiBase<SwapiFilm> {}
 
 export type SwapiVehicle = {
-  cargo_capacity: number
+  cargo_capacity: string
   consumables: string
-  cost_in_credits: number
+  cost_in_credits: string
   created: string
   crew: number
   edited: string
-  length: number
+  length: string
   manufacturer: string
   max_atmosphering_speed: number
   model: string
