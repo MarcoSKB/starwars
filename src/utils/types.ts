@@ -11,9 +11,9 @@ export type SwapiPerson = {
   films: string[]
   gender: string
   hair_color: string
-  height: number
+  height: string
   homeworld: string
-  mass: number
+  mass: string
   name: string
   skin_color: string
   created: string
