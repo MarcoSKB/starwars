@@ -11,6 +11,7 @@ import {
   FilmsPage,
   HomePage,
   NotFoundPage,
+  PersonDetailPage,
   PeoplePage,
   PlanetDetailPage,
   VehicleDetailPage,
@@ -18,9 +19,6 @@ import {
 } from '@pages/index.ts'
 import Layout from './Layout.tsx'
 import './index.css'
-
-// TODO: Change all residents to card component
-//       Change props like string[] to types
 
 const router = createBrowserRouter(
   [
@@ -60,6 +58,10 @@ const router = createBrowserRouter(
         {
           path: 'people',
           element: <PeoplePage />,
+        },
+        {
+          path: 'people/:personId',
+          element: <PersonDetailPage />,
         },
         {
           path: '*',

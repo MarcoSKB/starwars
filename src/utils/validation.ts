@@ -87,3 +87,31 @@ export const vehicleEditSchema = yup.object({
     .min(1, 'Length capacity field must be at least 4 characters long')
     .required('Length capacity is a required field'),
 })
+
+export const personEditSchema = yup.object({
+  gender: yup
+    .string()
+    .typeError('The Gender field must be the string type')
+    .min(4, 'Gender field must be at least 4 characters long')
+    .required('Gender is a required field'),
+  birth_year: yup
+    .string()
+    .typeError('The Birth year class field must be the string type')
+    .min(4, 'Birth year class field must be at least 4 characters long')
+    .required('Birth year class is a required field'),
+  hair_color: yup
+    .string()
+    .typeError('The Hair color field must be the string type')
+    .min(3, 'Hair color field must be at least 4 characters long')
+    .required('Hair color is a required field'),
+  height: yup
+    .string()
+    .typeError('The Height capacity field must be the string type')
+    .min(1, 'Height capacity field must be at least 4 characters long')
+    .required('Height capacity is a required field'),
+  mass: yup
+    .string()
+    .typeError('The Mass field must be the string type')
+    .min(1, 'Mass capacity field must be at least 4 characters long')
+    .required('Mass capacity is a required field'),
+})
