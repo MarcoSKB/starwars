@@ -13,7 +13,7 @@ const PeopleItem: React.FC<Props> = ({ id, data }) => {
   return (
     <tr className='flex w-full justify-between gap-2 md:gap-4'>
       <td className='border-accent flex flex-1 border-x-1 px-3'>
-        <Link to={`/vehicle/${id}`} className='py-1 md:py-1.5'>
+        <Link to={`/people/${id}`} className='py-1 md:py-1.5'>
           {personData.name}&#160;↵
         </Link>
       </td>
