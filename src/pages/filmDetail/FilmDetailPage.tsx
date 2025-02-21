@@ -36,7 +36,7 @@ const FilmDetailPage = () => {
       <section className='flex flex-col pt-8'>
         <div className='relative z-0 mb-5 flex h-[200px] w-full items-center justify-center overflow-hidden p-4 md:mb-10 md:h-[320px]'>
           <img
-            src='/images/film-poster.jpg'
+            src={import.meta.env.BASE_URL + '/images/film-poster.jpg'}
             className='pointer-events-none absolute top-0 left-0 -z-10 mb-4 h-full w-full rounded-xl bg-black object-cover object-[0%_10%] opacity-80'
             alt='Film poster'
           />

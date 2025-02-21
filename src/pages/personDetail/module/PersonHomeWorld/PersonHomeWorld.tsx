@@ -37,7 +37,7 @@ const PersonHomeWold: React.FC<Props> = ({ url }) => {
           data={worldData}
         />
         <img
-          src='/images/planet.jpg'
+          src={import.meta.env.BASE_URL + '/images/planet.jpg'}
           className='w-full max-w-[320px] mix-blend-lighten'
           alt='Planet image'
         />

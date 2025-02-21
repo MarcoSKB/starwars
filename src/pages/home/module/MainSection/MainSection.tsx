@@ -5,7 +5,7 @@ const MainSection = () => {
     <Container>
       <section className='relative z-0 mb-5 flex min-h-[240px] w-full items-center justify-center overflow-hidden rounded-2xl px-4 sm:min-h-[500px] md:mb-12 lg:min-h-[640px]'>
         <img
-          src='./images/main-poster.jpg'
+          src={import.meta.env.BASE_URL + '/images/main-poster.jpg'}
           className='pointer-events-none absolute top-0 left-0 z-0 h-full w-full object-cover'
           alt='Main poster about star wars'
         />
