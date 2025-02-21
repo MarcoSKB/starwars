@@ -7,6 +7,7 @@ import VehiclePage from './vehicle/VehiclePage'
 import NotFoundPage from './notFound/NotFoundPage'
 import PlanetDetailPage from './planetDetail/PlanetDetailPage'
 import FilmDetailPage from './filmDetail/FilmDetailPage'
+import VehicleDetailPage from './vehicleDetail/VehicleDetailPage'
 
 export {
   ErrorPage,
@@ -18,4 +19,5 @@ export {
   NotFoundPage,
   PlanetDetailPage,
   FilmDetailPage,
+  VehicleDetailPage,
 }

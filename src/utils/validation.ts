@@ -59,3 +59,31 @@ export const filmEditSchema = yup.object({
     .min(4, 'Producer field must be at least 4 characters long')
     .required('Producer is a required field'),
 })
+
+export const vehicleEditSchema = yup.object({
+  model: yup
+    .string()
+    .typeError('The Model field must be the string type')
+    .min(4, 'Model field must be at least 4 characters long')
+    .required('Model is a required field'),
+  vehicle_class: yup
+    .string()
+    .typeError('The Vehicle class field must be the string type')
+    .min(4, 'Vehicle class field must be at least 4 characters long')
+    .required('Vehicle class is a required field'),
+  cost_in_credits: yup
+    .string()
+    .typeError('The Price field must be the string type')
+    .min(1, 'Price field must be at least 4 characters long')
+    .required('Price is a required field'),
+  cargo_capacity: yup
+    .string()
+    .typeError('The Cargo capacity field must be the string type')
+    .min(1, 'Cargo capacity field must be at least 4 characters long')
+    .required('Cargo capacity is a required field'),
+  length: yup
+    .string()
+    .typeError('The Length field must be the string type')
+    .min(1, 'Length capacity field must be at least 4 characters long')
+    .required('Length capacity is a required field'),
+})
