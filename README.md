@@ -1,10 +1,10 @@
-# Star Wars Universe Explorer
+# Star Wars WIKI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-v18.2.0-blue)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript--blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3.3.2-blue)](https://tailwindcss.com/)
-[![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-v1.9.5-blue)](https://redux-toolkit.js.org/)
+[![React](https://img.shields.io/badge/React-v19.0.0-blue)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.2-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0.6-blue)](https://tailwindcss.com/)
+[![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-v2.5.1-blue)](https://redux-toolkit.js.org/)
 
 ## Project Description
 
@@ -12,7 +12,7 @@ This project is a web application that allows you to explore the Star Wars unive
 
 ## Demo web-site
 
-[Starwars WIKI](https://)
+[Starwars WIKI](https://marcoskb.github.io/starwars/)
 
 ## Technologies used
 
