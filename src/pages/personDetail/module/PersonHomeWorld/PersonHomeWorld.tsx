@@ -17,7 +17,13 @@ const PersonHomeWold: React.FC<Props> = ({ url }) => {
   if (loading || !worldData) {
     return (
       <>
-        <div>Loading...</div>
+        <div className='flex w-full flex-col gap-4'>
+          <div className='bg-darkGray h-20 w-1/2 animate-pulse rounded-md opacity-40' />
+          <div className='flex w-full flex-col justify-between gap-5 md:flex-row md:gap-2'>
+            <div className='bg-darkGray h-60 w-[40%] animate-pulse rounded-md opacity-40' />
+            <div className='bg-darkGray h-[320px] w-full max-w-[320px] animate-pulse rounded-md opacity-40' />
+          </div>
+        </div>
       </>
     )
   }

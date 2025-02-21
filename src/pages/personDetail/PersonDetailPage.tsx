@@ -21,11 +21,16 @@ const PersonDetailPage = () => {
   if (loading || !personData) {
     return (
       <Container>
-        <div className='mb-5 flex flex-col gap-3 py-4 md:mb-12'>
+        <div className='mb-5 flex flex-col gap-3 py-4 md:mb-6'>
           <div className='bg-darkGray h-16 animate-pulse rounded-md opacity-40 md:w-[30%]' />
-          <div className='bg-darkGray mb-2 flex h-32 animate-pulse rounded-md opacity-40 md:w-1/2' />
-          <div className='bg-darkGray h-16 animate-pulse rounded-md opacity-40 md:w-[25%]' />
-          <div className='bg-darkGray mb-2 flex h-60 w-full animate-pulse rounded-md opacity-40' />
+          <div className='bg-darkGray mb-2 flex h-60 animate-pulse rounded-md opacity-40 md:w-1/2' />
+        </div>
+        <div className='flex w-full flex-col gap-4'>
+          <div className='bg-darkGray h-20 w-1/2 animate-pulse rounded-md opacity-40' />
+          <div className='flex w-full flex-col justify-between gap-5 md:flex-row md:gap-2'>
+            <div className='bg-darkGray h-60 w-[40%] animate-pulse rounded-md opacity-40' />
+            <div className='bg-darkGray h-[320px] w-full max-w-[320px] animate-pulse rounded-md opacity-40' />
+          </div>
         </div>
       </Container>
     )
